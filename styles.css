@@ -22,6 +22,13 @@ button{
 img{
     width: 100%;
 }
+.silver-color{
+    font-weight: 500;
+    color: #727272;
+}
+.colored{
+    color: #FF900E;
+}
 /* common class css */
 .container{
     max-width: 100%;
@@ -30,12 +37,14 @@ img{
 .detail{
     color: #727272;
     line-height: 26px;
+    margin-bottom: 30px;
 }
 .title{
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 53px;
+    line-height: 45px;
     color: #131313;
+    margin-bottom: 24px;
 }
 .inner-title, .button{
     font-size: 20px;
@@ -130,30 +139,45 @@ img{
 }
 /* feature area */
 .feature-area{
-    padding: 85px 0 130px;
+    padding: 50px 0px;
 }
 .quick-feature {
     display: flex;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 25px;
+    flex-direction:column-reverse;
 }
 .feature-images {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
     width: 100%;
 }
 .feature-content{
-    padding-left: 74px;
+    padding-left: 0;
+    margin-bottom: 40px;
 }
-/* responsive css */
+/* promising feature */
 
-@media (max-width: 575px) {
+/* responsive css */
+@media (min-width: 480px) {
+    .feature-images {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) {
     .container{
         max-width: 750px;
+    }
+    .button{
+        padding: 20px 24px;
+        border-radius: 8px;
+    }
+    .colored{
+        display: block;
     }
     .header-menu{
         display: flex;
@@ -171,9 +195,15 @@ img{
         font-size: 50px;
         margin-bottom: 30px;
     }
-    .button{
-        padding: 20px 24px;
-        border-radius: 8px;
+    .feature-area{
+        padding: 85px 0 130px;
+    }
+    .quick-feature {
+        flex-direction:row;
+    }
+    .feature-content{
+        padding-left: 74px;
+        margin-bottom: 0;
     }
 }
 
@@ -181,12 +211,22 @@ img{
     .container{
         max-width: 950px;
     }
+    .title{
+        font-size: 45px;
+        line-height: 53px;
+    }
     .header-area{
         padding: 45px;
     }
     .banner-title{
         font-size: 64px;
         line-height: 75px;
+    }
+    .quick-feature {
+        padding: 0 60px;
+    }
+    .feature-images{
+        gap: 24;
     }
 }
 
